@@ -1,4 +1,5 @@
 require 'mechanize'
+
 module ApiCall
   #TODO Fill in the code for the PUt, POST, and DELETE
   #TODO use a switch statement or the send method to improve this code
@@ -16,4 +17,3 @@ module ApiCall
     end
   end
 end
-

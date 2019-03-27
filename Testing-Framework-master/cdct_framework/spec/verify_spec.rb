@@ -1,20 +1,21 @@
 require_relative '../spec/spec_helper'
 include ApiCall
 
-def test(filestream)
+def test(filestream,todelete = nil)
   json_payload = JSON.parse(filestream)
 
   #Retrieve the values from the JSON file
   url = json_payload['service_url']
   call_type = json_payload['request_type']
-  request_body = json_payload['request_body']
+  request_body = json_payload['request_body'].to_json
 
   #Make the service call to the URL that was defined in the JSON file
   service_response = ApiCall.call_service(url, call_type,request_body)
-
+  response_body = JSON.parse(service_response.body)
+  response_body.delete(todelete)
   #Compare the service response to the expected response
   expect(service_response.code).to eq(json_payload['expected_response_code'])
-  expect(JSON.parse(service_response.body)).to eq(json_payload['expected_response_body'])
+  expect(response_body).to eq(json_payload['expected_response_body'])
 end
 
 describe 'test' do
@@ -31,6 +32,6 @@ describe 'test' do
 
   it 'can create a customer by post correctly' do
     file = File.read('json_files/post_customer.json')
-    test(file)
+    test(file,'cust_id')
   end
 end
