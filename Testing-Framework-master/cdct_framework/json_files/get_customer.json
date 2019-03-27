@@ -1,5 +1,5 @@
 {
-  "service_url": "http://127.0.0.1:8000/myapp/customers/1",
+  "service_url": "http://127.0.0.1:8000/myapp/customers/1/",
   "request_type": "GET",
   "request_body": {},
   "expected_response_code": "200",
