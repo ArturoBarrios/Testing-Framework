@@ -1,7 +1,16 @@
 {
   "service_url": "http://127.0.0.1:8000/myapp/customers/1",
-  "request_type": "GET",
-  "request_body": {},
+  "request_type": "PUT",
+  "request_body": {
+    "cust_id": 1,
+    "c_first_name": "Joli",
+    "c_last_name": "Moreinis",
+    "address": "84297 Hoffman Plaza",
+    "city": "Łaziska,Górne",
+    "postal_code": "43-173",
+    "email": "jmoreinis2@dyndns.org",
+    "phone": 4304404875
+  },
   "expected_response_code": "200",
   "expected_response_body": {
       "cust_id": 1,
