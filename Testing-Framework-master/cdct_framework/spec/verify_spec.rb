@@ -79,4 +79,78 @@ describe 'test' do
     ApiCall.call_service("http://127.0.0.1:8000/myapp/customers/",'POST',data)
   end
 
+
+  it 'can get airplane correctly' do
+    #Read and parse the file into JSON format
+    file = File.read('json_files/get_airplane.json')
+    json_payload = JSON.parse(file)
+
+    #Retrieve the values from the JSON file
+    url = json_payload['service_url']
+    call_type = json_payload['request_type']
+    request_body = json_payload['request_body'].to_json
+
+    #Make the service call to the URL that was defined in the JSON file
+    service_response = ApiCall.call_service(url, call_type,request_body)
+    response_body = JSON.parse(service_response.body)
+    #Compare the service response to the expected response
+    expect(service_response.code).to eq(json_payload['expected_response_code'])
+    expect(response_body).to eq(json_payload['expected_response_body'])
+  end
+
+  it 'can create an airplane by post correctly' do
+    file = File.read('json_files/post_airplane.json')
+    json_payload = JSON.parse(file)
+
+    #Retrieve the values from the JSON file
+    url = json_payload['service_url']
+    call_type = json_payload['request_type']
+    request_body = json_payload['request_body'].to_json
+
+    #Make the service call to the URL that was defined in the JSON file
+    service_response = ApiCall.call_service(url, call_type,request_body)
+    response_body = JSON.parse(service_response.body)
+    #Compare the service response to the expected response
+    expect(service_response.code).to eq(json_payload['expected_response_code'])
+    expect(response_body).to eq(json_payload['expected_response_body'])
+    ApiCall.call_service("http://127.0.0.1:8000/myapp/airplanes/999",'DELETE',{})
+  end
+
+  it 'can update an airplane by put correctly' do
+    #Read and parse the file into JSON format
+    file = File.read('json_files/put_airplane.json')
+    json_payload = JSON.parse(file)
+
+    #Retrieve the values from the JSON file
+    url = json_payload['service_url']
+    call_type = json_payload['request_type']
+    request_body = json_payload['request_body'].to_json
+
+    #Make the service call to the URL that was defined in the JSON file
+    service_response = ApiCall.call_service(url, call_type,request_body)
+    response_body = JSON.parse(service_response.body)
+    #Compare the service response to the expected response
+    expect(service_response.code).to eq(json_payload['expected_response_code'])
+    expect(response_body).to eq(json_payload['expected_response_body'])
+  end
+
+  it 'can delete an airplane correctly' do
+    file = File.read('json_files/delete_airplane.json')
+    json_payload = JSON.parse(file)
+    #Retrieve the values from the JSON file
+    url = json_payload['service_url']
+    data = ApiCall.call_service(url,'GET').body
+    call_type = json_payload['request_type']
+    request_body = json_payload['request_body'].to_json
+
+    #Make the service call to the URL that was defined in the JSON file
+    service_response = ApiCall.call_service(url, call_type,request_body)
+    response_body = {}
+    #Compare the service response to the expected response
+    expect(service_response.code).to eq(json_payload['expected_response_code'])
+    expect(response_body).to eq(json_payload['expected_response_body'])
+    ApiCall.call_service("http://127.0.0.1:8000/myapp/airplanes/",'POST',data)
+  end
+
+
 end
