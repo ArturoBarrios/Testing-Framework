@@ -1,0 +1,17 @@
+{
+  "service_url": "http://127.0.0.1:8000/myapp/airports/3",
+  "request_type": "PUT",
+  "request_body": {
+    "airport_id": 3,
+    "airport_name": "Midway Airport",
+    "city": "Chicago",
+    "state": "Illinois"
+  },
+  "expected_response_code": "200",
+  "expected_response_body": {
+    "airport_id": 3,
+    "airport_name": "Midway Airport",
+    "city": "Chicago",
+    "state": "Illinois",
+  }
+}
