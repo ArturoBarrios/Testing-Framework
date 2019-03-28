@@ -6,8 +6,5 @@
   "max_seats": 21,
   "type": "A999"},
   "expected_response_code": "204",
-  "expected_response_body": {"airplane_id": 1,
-  "manufacturer": "Airbus2",
-  "max_seats": 21,
-  "type": "A999"}
+  "expected_response_body": {}
 }
