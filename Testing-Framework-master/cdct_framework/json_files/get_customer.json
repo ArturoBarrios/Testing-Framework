@@ -4,13 +4,13 @@
   "request_body": {},
   "expected_response_code": "200",
   "expected_response_body": {
-      "cust_id": 1,
-      "c_first_name": "Joli",
-      "c_last_name": "Moreinis",
-      "address": "84297 Hoffman Plaza",
-      "city": "Łaziska,Górne",
-      "postal_code": "43-173",
-      "email": "jmoreinis2@dyndns.org",
-      "phone": 4304404875
-    }
+    "cust_id": 1,
+    "c_first_name": "Dolorita",
+    "c_last_name": "Brumen",
+    "address": "76347 Hauk Terrace",
+    "city": "Liangdang Chengguanzhen",
+    "postal_code": "41234",
+    "email": "dbrumen0@addthis.com",
+    "phone": 1756675012
+  }
 }
