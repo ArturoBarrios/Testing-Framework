@@ -1,0 +1,7 @@
+{
+  "service_url": "http://localhost:8000/myapp/customers/1",
+  "request_type": "DELETE",
+  "request_body": {},
+  "expected_response_code": "204",
+  "expected_response_body": {}
+}

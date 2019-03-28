@@ -1,0 +1,25 @@
+{
+  "service_url": "http://127.0.0.1:8000/myapp/customers/",
+  "request_type": "POST",
+  "request_body": {
+    "cust_id": 999,
+    "c_first_name": "Dolorita",
+    "c_last_name": "Brumen",
+    "address": "76347 Hauk Terrace",
+    "city": "Liangdang Chengguanzhen",
+    "postal_code": "41234",
+    "email": "dbrumen0@addthis.com",
+    "phone": 1756675012
+  },
+  "expected_response_code": "200",
+  "expected_response_body": {
+    "cust_id": 999,
+    "c_first_name": "Dolorita",
+    "c_last_name": "Brumen",
+    "address": "76347 Hauk Terrace",
+    "city": "Liangdang Chengguanzhen",
+    "postal_code": "41234",
+    "email": "dbrumen0@addthis.com",
+    "phone": 1756675012
+  }
+}
