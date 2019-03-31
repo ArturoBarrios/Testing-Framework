@@ -1,0 +1,27 @@
+{
+  "service_url": "http://127.0.0.1:8000/myapp/flights/",
+  "request_type": "POST",
+  "request_body": {
+    "flight_id": 99,
+    "airplane_id": 7,
+    "cust_id": 8,
+    "date_arriv": "2021-02-26",
+    "date_dep": "2021-02-25",
+    "scheduled_dep_time": "01:20:00",
+    "scheduled_arriv_time": "12:30:00",
+    "departure_airport": "DTW",
+    "arrival_airport": "YYZ"
+  },
+  "expected_response_code": "200",
+  "expected_response_body": {
+    "flight_id": 99,
+    "airplane_id": 7,
+    "cust_id": 8,
+    "date_arriv": "2021-02-26",
+    "date_dep": "2021-02-25",
+    "scheduled_dep_time": "01:20:00",
+    "scheduled_arriv_time": "12:30:00",
+    "departure_airport": "DTW",
+    "arrival_airport": "YYZ"
+  }
+}
