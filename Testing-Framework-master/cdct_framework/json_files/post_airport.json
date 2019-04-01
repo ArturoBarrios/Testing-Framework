@@ -3,7 +3,7 @@
   "request_type": "POST",
   "request_body": {
     "airport_id": 999,
-    "airport_name": "John Glen Columbus Airport",
+    "airport_name": "John Glenn Columbus Airport",
     "city": "Columbus",
     "state": "Ohio"
   },
@@ -12,6 +12,6 @@
     "airport_id": 999,
     "airport_name": "John Glenn Columbus Airport",
     "city": "Columbus",
-    "state": "Ohio",
+    "state": "Ohio"
   }
 }
