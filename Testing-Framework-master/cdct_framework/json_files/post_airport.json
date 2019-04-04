@@ -1,6 +1,10 @@
 {
   "service_url": "http://127.0.0.1:8000/myapp/airports/",
   "request_type": "POST",
+  "request_parameters":
+    {
+
+    },
   "request_body": {
     "airport_id": 999,
     "airport_name": "John Glenn Columbus Airport",

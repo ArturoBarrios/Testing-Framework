@@ -1,7 +1,20 @@
 {
   "service_url": "http://localhost:8000/myapp/flights/1",
   "request_type": "DELETE",
+  "request_parameters":
+    {
+
+    },
   "request_body": {
+    "flight_id": 1,
+    "airplane_id": 3,
+    "cust_id": 7,
+    "date_arriv": "2019-02-26",
+    "date_dep": "2019-02-25",
+    "scheduled_dep_time": "22:00:00",
+    "scheduled_arriv_time": "03:58:00",
+    "departure_airport": "CMH",
+    "arrival_airport": "ICN"
   },
   "expected_response_code": "204",
   "expected_response_body": {

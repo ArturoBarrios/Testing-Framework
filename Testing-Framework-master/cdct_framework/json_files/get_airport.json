@@ -1,6 +1,10 @@
 {
   "service_url": "http://127.0.0.1:8000/myapp/airports/1",
   "request_type": "GET",
+  "request_parameters":
+    {
+
+    },
   "request_body": {},
   "expected_response_code": "200",
   "expected_response_body": {

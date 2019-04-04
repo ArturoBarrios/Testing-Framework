@@ -1,6 +1,10 @@
 {
   "service_url": "http://127.0.0.1:8000/myapp/airports/3",
   "request_type": "PUT",
+  "request_parameters":
+    {
+
+    },
   "request_body": {
     "airport_id": 3,
     "airport_name": "Midway Airport",
