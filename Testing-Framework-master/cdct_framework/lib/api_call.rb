@@ -8,13 +8,13 @@ module ApiCall
     agent.verify_mode = OpenSSL::SSL::VERIFY_NONE
     case call_type
     when 'GET'
-      agent.get(url)
+      agent.get(url, parameters)
     when 'PUT'
-      agent.put(url,body)
+      agent.put(url, parameters, body)
     when 'POST'
-      agent.post(url,body)
+      agent.post(url, parameters, body)
     when 'DELETE'
-      agent.delete(url)
+      agent.delete(url, parameters)
     else
       "Not valid call type"
     end

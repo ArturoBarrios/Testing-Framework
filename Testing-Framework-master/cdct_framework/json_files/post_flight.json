@@ -1,6 +1,10 @@
 {
   "service_url": "http://127.0.0.1:8000/myapp/flights/",
   "request_type": "POST",
+  "request_parameters":
+    {
+
+    },
   "request_body": {
     "flight_id": 999,
     "airplane_id": 7,

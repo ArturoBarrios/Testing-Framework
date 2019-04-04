@@ -1,6 +1,10 @@
 {
   "service_url": "http://127.0.0.1:8000/myapp/customers/1",
   "request_type": "PUT",
+  "request_parameters":
+    {
+
+    },
   "request_body": {
     "cust_id": 1,
     "c_first_name": "Joli",
