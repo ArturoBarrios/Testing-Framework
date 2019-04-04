@@ -19,7 +19,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, params, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
     response_body = JSON.parse(service_response.body)
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -37,7 +37,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
     response_body = JSON.parse(service_response.body)
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -57,7 +57,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
     response_body = JSON.parse(service_response.body)
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -75,7 +75,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, params, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
     response_body = {}
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -96,7 +96,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, params, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
     response_body = JSON.parse(service_response.body)
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -114,7 +114,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
     response_body = JSON.parse(service_response.body)
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -134,7 +134,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, params, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
     response_body = JSON.parse(service_response.body)
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -152,7 +152,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
     response_body = {}
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -173,7 +173,7 @@ describe 'test' do
   request_body = json_payload['request_body'].to_json
 
   #Make the service call to the URL that was defined in the JSON file
-  service_response = ApiCall.call_service(url, params, call_type,request_body)
+  service_response = ApiCall.call_service(url, parameters, call_type,request_body)
   response_body = JSON.parse(service_response.body)
   #Compare the service response to the expected response
   expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -191,7 +191,7 @@ describe 'test' do
   request_body = json_payload['request_body'].to_json
 
   #Make the service call to the URL that was defined in the JSON file
-  service_response = ApiCall.call_service(url, call_type,request_body)
+  service_response = ApiCall.call_service(url, parameters, call_type,request_body)
   response_body = JSON.parse(service_response.body)
   #Compare the service response to the expected response
   expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -211,7 +211,7 @@ describe 'test' do
   request_body = json_payload['request_body'].to_json
 
   #Make the service call to the URL that was defined in the JSON file
-  service_response = ApiCall.call_service(url, call_type,request_body)
+  service_response = ApiCall.call_service(url, parameters, call_type,request_body)
   response_body = JSON.parse(service_response.body)
   #Compare the service response to the expected response
   expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -229,7 +229,7 @@ describe 'test' do
   request_body = json_payload['request_body'].to_json
 
   #Make the service call to the URL that was defined in the JSON file
-  service_response = ApiCall.call_service(url, call_type,request_body)
+  service_response = ApiCall.call_service(url, parameters, call_type,request_body)
   response_body = {}
   #Compare the service response to the expected response
   expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -250,7 +250,7 @@ describe 'test' do
     request_body = json_payload['request_body']
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, params, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
 
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -269,7 +269,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
 
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -288,7 +288,7 @@ describe 'test' do
     request_body = json_payload['request_body'].to_json
 
     #Make the service call to the URL that was defined in the JSON file
-    service_response = ApiCall.call_service(url, call_type,request_body)
+    service_response = ApiCall.call_service(url, parameters, call_type,request_body)
 
     #Compare the service response to the expected response
     expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -307,7 +307,7 @@ describe 'test' do
   request_body = json_payload['request_body'].to_json
 
   #Make the service call to the URL that was defined in the JSON file
-  service_response = ApiCall.call_service(url, call_type,request_body)
+  service_response = ApiCall.call_service(url, parameters, call_type,request_body)
   response_body = {}
   #Compare the service response to the expected response
   expect(service_response.code).to eq(json_payload['expected_response_code'])
