@@ -2,5 +2,5 @@
 
 <% if ENV['ci'] == 'on' %>
 --format RspecJunitFormatter
---out tmp/result.xml
+--out result.xml
 <% end %>
