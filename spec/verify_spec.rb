@@ -15,16 +15,23 @@ describe 'test' do
         request_body = json_payload['request_body'].to_json
 
         case call_type
-        when 'GET' || 'PUT'
+        when 'GET'
           #Make the service call to the URL that was defined in the JSON file
-          service_response = ApiCall.call_service(url, parameters, call_type,request_body)
+          service_response = ApiCall.call_service(url,call_type,parameters,request_body)
+          response_body = JSON.parse(service_response.body)
+          #Compare the service response to the expected response
+          expect(service_response.code).to eq(json_payload['expected_response_code'])
+          expect(response_body).to eq(json_payload['expected_response_body'])
+        when 'PUT'
+          #Make the service call to the URL that was defined in the JSON file
+          service_response = ApiCall.call_service(url, call_type, parameters,request_body)
           response_body = JSON.parse(service_response.body)
           #Compare the service response to the expected response
           expect(service_response.code).to eq(json_payload['expected_response_code'])
           expect(response_body).to eq(json_payload['expected_response_body'])
         when 'POST'
           #Make the service call to the URL that was defined in the JSON file
-          service_response = ApiCall.call_service(url, parameters, call_type,request_body)
+          service_response = ApiCall.call_service(url,call_type,parameters,request_body)
           response_body = JSON.parse(service_response.body)
           #Compare the service response to the expected response
           expect(service_response.code).to eq(json_payload['expected_response_code'])
@@ -33,12 +40,12 @@ describe 'test' do
         when 'DELETE'
           data = ApiCall.call_service(url,'GET').body
           #Make the service call to the URL that was defined in the JSON file
-          service_response = ApiCall.call_service(url, parameters, call_type,request_body)
+          service_response = ApiCall.call_service(url,call_type,parameters,request_body)
           response_body = {}
           #Compare the service response to the expected response
           expect(service_response.code).to eq(json_payload['expected_response_code'])
           expect(response_body).to eq(json_payload['expected_response_body'])
-          ApiCall.call_service(url.delete("1"),'POST',data)
+          ApiCall.call_service(url.delete("1"),'POST',parameters,data)
         end
       end
     end

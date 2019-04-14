@@ -3,18 +3,18 @@ require 'mechanize'
 module ApiCall
   #TODO Fill in the code for the PUt, POST, and DELETE
   #TODO use a switch statement or the send method to improve this code
-  def call_service url, call_type, body=nil
+  def call_service(url, call_type, parameters=nil, body=nil)
     agent = Mechanize.new
     agent.verify_mode = OpenSSL::SSL::VERIFY_NONE
     case call_type
     when 'GET'
-      agent.get(url, parameters)
+      agent.get(url,parameters)
     when 'PUT'
-      agent.put(url, parameters, body)
+      agent.put(url,body)
     when 'POST'
-      agent.post(url, parameters, body)
+      agent.post(url,body)
     when 'DELETE'
-      agent.delete(url, parameters)
+      agent.delete(url)
     else
       "Not valid call type"
     end
