@@ -5,12 +5,7 @@
     {
 
     },
-  "request_body": {
-    "airport_id": 1,
-    "airport_name": "O'hare Airport",
-    "city": "Chicago",
-    "state": "Illinois"
-  },
+  "request_body": {},
   "expected_response_code": "204",
   "expected_response_body": {}
 }

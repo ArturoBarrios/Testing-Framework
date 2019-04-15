@@ -6,7 +6,7 @@
 
     },
   "request_body": {
-    "flight_id": 99,
+    "flight_id": 999,
     "airplane_id": 7,
     "cust_id": 8,
     "date_arriv": "2021-02-26",
@@ -18,7 +18,7 @@
   },
   "expected_response_code": "200",
   "expected_response_body": {
-    "flight_id": 99,
+    "flight_id": 999,
     "airplane_id": 7,
     "cust_id": 8,
     "date_arriv": "2021-02-26",
